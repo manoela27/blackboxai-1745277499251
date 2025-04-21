@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supremo.Domain", "Supremo.Domain\Supremo.Domain.csproj", "{1B2C3D4E-5F6G-7H8I-9J0K-LMNOPQRSTUV1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supremo.Infrastructure", "Supremo.Infrastructure\Supremo.Infrastructure.csproj", "{2B3C4D5E-6F7G-8H9I-0J1K-LMNOPQRSTUV2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supremo.Web", "Supremo.Web\Supremo.Web.csproj", "{3B4C5D6E-7F8G-9H0I-1J2K-LMNOPQRSTUV3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B2C3D4E-5F6G-7H8I-9J0K-LMNOPQRSTUV1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2C3D4E-5F6G-7H8I-9J0K-LMNOPQRSTUV1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2C3D4E-5F6G-7H8I-9J0K-LMNOPQRSTUV1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2C3D4E-5F6G-7H8I-9J0K-LMNOPQRSTUV1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B3C4D5E-6F7G-8H9I-0J1K-LMNOPQRSTUV2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3C4D5E-6F7G-8H9I-0J1K-LMNOPQRSTUV2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3C4D5E-6F7G-8H9I-0J1K-LMNOPQRSTUV2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3C4D5E-6F7G-8H9I-0J1K-LMNOPQRSTUV2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4C5D6E-7F8G-9H0I-1J2K-LMNOPQRSTUV3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4C5D6E-7F8G-9H0I-1J2K-LMNOPQRSTUV3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4C5D6E-7F8G-9H0I-1J2K-LMNOPQRSTUV3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4C5D6E-7F8G-9H0I-1J2K-LMNOPQRSTUV3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
