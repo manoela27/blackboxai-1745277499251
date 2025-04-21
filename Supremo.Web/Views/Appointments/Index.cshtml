@@ -1,0 +1,60 @@
+@model IEnumerable<Supremo.Domain.Entities.Appointment>
+
+@{
+    ViewData["Title"] = "Agendamentos";
+}
+
+<div class="container">
+    <h2 class="text-center mb-4 text-success">Agendamentos</h2>
+    
+    <div class="mb-3">
+        <a asp-action="Create" class="btn btn-success">
+            <i class="fas fa-plus"></i> Novo Agendamento
+        </a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="bg-success text-white">
+                <tr>
+                    <th>Cliente</th>
+                    <th>Email</th>
+                    <th>Data</th>
+                    <th>Observações</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CustomerName</td>
+                        <td>@item.Email</td>
+                        <td>@item.AppointmentDate.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@item.Notes</td>
+                        <td>
+                            <div class="btn-group">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning me-2">
+                                    <i class="fas fa-edit"></i> Editar
+                                </a>
+                                <button type="button" class="btn btn-sm btn-danger" onclick="confirmDelete(@item.Id)">
+                                    <i class="fas fa-trash"></i> Excluir
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmDelete(id) {
+            if (confirm("Deseja realmente excluir este agendamento?")) {
+                window.location.href = `/Appointments/Delete/${id}`;
+            }
+        }
+    </script>
+}
