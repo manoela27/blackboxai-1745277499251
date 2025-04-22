@@ -1,0 +1,29 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    // Custom validation messages in Portuguese
+    $.extend($.validator.messages, {
+        required: "Este campo é obrigatório.",
+        email: "Por favor, insira um endereço de e-mail válido.",
+        date: "Por favor, insira uma data válida.",
+        dateISO: "Por favor, insira uma data válida (ISO).",
+        number: "Por favor, insira um número válido.",
+        digits: "Por favor, insira somente dígitos.",
+        maxlength: $.validator.format("Por favor, insira no máximo {0} caracteres."),
+        minlength: $.validator.format("Por favor, insira no mínimo {0} caracteres."),
+        range: $.validator.format("Por favor, insira um valor entre {0} e {1}."),
+        max: $.validator.format("Por favor, insira um valor menor ou igual a {0}."),
+        min: $.validator.format("Por favor, insira um valor maior ou igual a {0}.")
+    });
+
+    // Custom validation for datetime-local
+    $.validator.addMethod(
+        "datetime",
+        function(value, element) {
+            if (value === "") return true; // Let required handle empty fields
+            return moment(value).isValid();
+        },
+        "Por favor, insira uma data e hora válidas."
+    );
+</script>
